@@ -261,7 +261,130 @@
                 //     opacity: '0.7'
                 // }, 2000);
                 // Selecionando o conteudo de um elemento
-                // jQuery('.menu li a:contains(About').css('outline', '2px solid #000')
+                // jQuery('.menu li a:contains(About').css('outline', '2px solid #000');
+                
+                // Selecionando elementos que estão "invisiveis"
+                // jQuery('.cars_list li:hidden').show();
+                // hidden todos que estão desaparecidos
+                
+                // Selecionando elementos invisiveis e atribuindo um csss
+                //jQuery('#show_cars li:hidden').css('text-decoration', 'underline').show();
+
+                // Selecionando elementos visiveis
+                // jQuery('hide_cars').click(function() {
+                //     jQuery('.cars_list li:visible').hide();
+                // });
+
+
+                jQuery('#toggle_cars').click(function() {
+
+                    let hiddenCars = jQuery('.cars_list li:hidden').length; // length retorna a quantidade de linha
+                    console.log(hiddenCars);
+
+                    let method = (hiddenCars > 0) ? 'show' : 'hide';
+
+                    // if( hiddenCars > 0) {
+                    //     method = 'show';
+                    //     // jQuery('.cars_list li').show();
+                    // } else {
+                    //     method = 'hide';
+                    //     // jQuery('.cars_list li').hide();
+                    // }
+                    // eval pega o que é passo como string e executa como funcao
+                    eval(`jQuery('.cars_list li').${method}()`);
+                    // criado um metodo para realiza a funcao do jQuery, depois atribuimos em uma variavel chamada method
+                    
+                    // Selecionando um botão
+                    // jQuery('#register :button').text();
+
+                    // Fazer uma simulação de um click com trigger
+                    // jQuery('#register :checkbox').trigger('click');
+
+                    // Selecionando o tipo de radio, e informar se estamos selecionando o masculino e feminino
+                    // jQuery('[type=radio]').change(function() {
+                    //     let value = jQuery('input:checked').val();
+
+                    //     let gender = (value == 'M') ? 'Masculino' : 'Feminino';
+                    //     alert(`Você selecionou o sexo ${gender}`); //+ gender//);
+                    // });
+
+                    // Selecionando os elementos desabilitados
+                    //jQuery('#register:disabled').val('matheus@contato.com.br').prop('disabled', false);
+
+                    // Indetifica quando usuario clica no campo
+                    // jQuery('input').focus(function() {
+
+                    //     jQuery('input:focus').val('Olá você clicou aqui!');
+                    // });
+
+                    // Selecionando o elemento submit
+                    //jQuery('#register :submit').css('background-color', 'orange');
+
+                    // Parar o evento de atualizar a pagina com preventDefault para o click do botao funcionar
+                    // jQuery('#register :submit').click(function(event) {
+                    //     event.preventDefault();
+                    //     console.log('Você clicou em um botão submit');
+                    // });
+
+                    // Criando o proprio filtro
+                    // jQuery.expr[':'].carsCentury21 = function(el) {
+                        
+                    //     return (jQuery(el).data('ano') > 2000);
+
+                    //     // if(jQuery(el).data('ano') > 2000 ) {
+
+                    //     //     return;
+                        
+                    //     // }
+                        
+                    // }
+                    // // Criando o proprio filtro
+                    // jQuery('.cars_list li:carsCentury21').css('font-size', '30px');
+
+                    // Outro filtro criado
+                    // jQuery.expr[':'].carsBeforeYear = jQuery.expr.createPseudo(function(year) {
+
+                    //     return function(el) {
+                            
+                    //         return (jQuery(el).data('ano') < year);
+                            
+                    //         // if(jQuery(el).data('ano') < year) {
+                    //         //     return true;
+                    //         // }
+                    //     }
+                    // });
+
+                    // Adicionando uma classe addClass
+                    // jQuery('header .menu ul li:last a').addClass('stylized_menu');
+
+                    // Removendo uma classe removeClass
+                    // jQuery('header .menu ul li:last a').removeClass('stylized_menu');
+
+                    // Alternando uma classe com o toggleClass
+                    // jQuery('header .menu ul li a').click(function(event) {
+                    //     event.preventDefault;
+                    //     jQuery(this).toggleClass('stylized_menu');
+                    // });
+
+                    // Verificando se um elemento possui uma classe
+                    // jQuery('header .menu ul li:last a').hasClass('stylized_menu');
+
+
+                    // Selecionando as classes p e adicionando esse texto
+                    // jQuery('p').each(function() {
+                    //     if(jQuery(this).hasClass('paragrafo')) {
+                    //         jQuery(this).append(`<span style="color: red;"> - Eu tenho a classe</span>`);
+                    //     }
+                    // });
+                    
+                    // Retornando ou definindo um atributo
+                    // jQuery('img').attr('src', 'assets/images/jquery.jpg');
+
+                    // Removendo um atributo
+                    // jQuery('h1').removeAttr('title');
+                
+                });
+
             });
             
 
